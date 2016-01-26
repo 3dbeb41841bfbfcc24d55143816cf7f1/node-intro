@@ -275,12 +275,12 @@ In the `car.js` file, define a `Car` constructor function with the following:
 - Methods: `accelerate` and `decelerate` methods:
   - each should take one argument, the speed, and add or substract it from the current speed
 - define a nice `toString` method:
-  - it should return a string containing the car's color, make, and model.
+  - it should return a string containing the car's color, make, model, and speed.
 
 Exports:
-- `car.js` should export a car that was created using the `Car` constructor function.
+- `car.js` should export a Car constructor function that can be used by main.js to construct some cars.
 
-In the `main.js` file, be sure to require the module and console log a message about your car object, including the current speed of the car.
+In the `main.js` file, be sure to require the module, create a car object, and console log a message about your car object, including the current speed of the car.
 
 ## Conclusion (5 mins)
 
