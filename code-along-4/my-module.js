@@ -1,5 +1,5 @@
 // my-module.js
-var number = 7j;
+var number = 7;
 module.exports.fruit = "Orange";
 module.exports.arr = [1, 2, 3];
 
