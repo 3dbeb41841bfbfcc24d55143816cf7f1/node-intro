@@ -2,7 +2,7 @@ def order_sandwich(customer, description, duration)
   puts "> #{customer} ordered a #{description}"
   sleep duration # a blocking operation
   sandwich = "a delicious #{description}"
-  puts "- #{customer}, you're order is ready!"
+  puts "- #{customer}, your order is ready!"
   puts "< #{customer} is enjoying #{sandwich}"
 end
 
