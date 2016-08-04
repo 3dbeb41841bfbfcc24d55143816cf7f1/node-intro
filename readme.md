@@ -5,6 +5,9 @@
     creator:
         name: Micah Rich
         city: LA
+    contributors:
+        name: Emily Reese
+        city: Atlanta
     competencies: Server Applications
     ---
 
