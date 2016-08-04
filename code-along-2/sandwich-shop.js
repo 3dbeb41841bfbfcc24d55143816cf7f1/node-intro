@@ -1,17 +1,35 @@
-function orderSandwich(customer, description, duration, callback) {
-  console.log('> ' + customer + ' ordered a ' + description);
+function showMsg(who, item, action) {
+  var returnMsg;
+  switch (action) {
+  case "order":
+    returnMsg = "> " + who + " ordered a " + item + ".";
+    break;
+  case "ready":
+    returnMsg = "- " + who + ", your " + item + " is ready!";
+    break;
+  case "eating":
+    returnMsg = "< " + who + " is enjoying " + item + ".";
+    break;
+  }
+  console.log(returnMsg);
+  return returnMsg;
+}
+
+function orderSandwich(customer, item, duration) {
+  // print the Ordered message
+  showMsg(customer, item, "order");
+
   setTimeout(function() {
-    console.log('- ' + customer + ', you\'re order is ready!');
-    var sandwich = 'a delicious ' + description;
-    callback(customer, sandwich);
+    // print the Ready message
+    showMsg(customer, item, "ready");
+
+    var deliciousItem = 'a delicious ' + item;
+    // print the Enjoy message
+    showMsg(customer, deliciousItem, "eating");
   }, duration * 1000);
 }
 
-function enjoySandwich(customer, sandwich) {
-  console.log('< ' + customer + ' is enjoying ' + sandwich);
-}
-
-orderSandwich('Jarrett', 'Roast Pork and Pickled Cucumber Sandwich', 4, enjoySandwich);
-orderSandwich('Mike', 'Reuben on Rye', 2, enjoySandwich);
-orderSandwich('Marc', 'Smoked Salmon Salad Sandwich', 6, enjoySandwich);
-orderSandwich('Shawn', 'Apple Peanut Butter Sandwich', 1, enjoySandwich);
+orderSandwich('Jarrett', 'Roast Pork and Pickled Cucumber Sandwich', 4);
+orderSandwich('Mike', 'Reuben on Rye', 2);
+orderSandwich('Marc', 'Smoked Salmon Salad Sandwich', 6);
+orderSandwich('Shawn', 'Apple Peanut Butter Sandwich', 1);
